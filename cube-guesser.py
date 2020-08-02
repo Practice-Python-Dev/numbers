@@ -5,7 +5,13 @@
 # ----- USER INPUT -----
 
 # Ask the user for a number to cube
-user_cube = int(input("Input an integer to be cubed: "))
+user_cube = int(input("Input an integer to cube: "))
+
+# Stop them from inputing a negative number
+while (user_cube < 0):
+  print("No negative numbers:")
+  user_cube = int(input("Input an integer to cube: "))
+
 
 # ----- SET VARIABLES -----
 
@@ -13,9 +19,9 @@ user_cube = int(input("Input an integer to be cubed: "))
 epsilon = 0.01
 
 # Set the amount to increment by (per guess)
-increment = 0.0001
+increment = 0.001
 
-# Each guess counts as 1.0 (float)
+# Start guessing here - (each guess counts as 1.0)
 comp_guess = 0.0
 
 # Variable to store total guesses
@@ -24,8 +30,9 @@ total_guesses = 0
 # ----- NOW CALCULATE! -----
 
 # 1) while: absolute value of (comp_guess **3 >= user_cube):
-# 2) if: 
-# 3) else:
+# 2) increment the guess number, save the amount of total guess 
+# 3) if: the user guess is negative print fail
+# 4) else: print success (or close to it)
 
 while abs(comp_guess**3 - user_cube) >= epsilon:
     comp_guess += increment
