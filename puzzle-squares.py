@@ -21,9 +21,9 @@ if x < 0:
 while answer **2 < x:
     answer += 1
 if answer **2 == x:
-    print('Square root of ', x, ' is ', answer)
+    print("Square root of ", x, " is ", answer)
 else:
-    print(x, 'is not a perfect square')
+    print(x, "is not a perfect square")
     if flag:
-        print(x, 'is negative. Try', -x, 'instead ...')
+        print(x, "is negative. Try", -x, "instead ...")
         
